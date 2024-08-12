@@ -23,8 +23,12 @@ class Node:
         return self.value
 
 class LinkedList:
+    head = None
+    tail = None
 
     def __init__(self, initial_value=None):
         ''' Current implentation always assumes LinkedList starts empty '''
         if initial_value != None:
+            self.head = Node(initial_value)
+        else:
             self.head = Node()
