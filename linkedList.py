@@ -1,10 +1,15 @@
 print("hello there")
 
 class Node:
+    next = None
+    previous = None
+    value = None
 
-    def __init__(self):
+    def __init__(self, val=None):
         self.next = None
         self.previous = None
+        if val != None:
+            self.value = val
 
     def isTail(self) -> bool:
         ''' Returns true if current node is LinkedList tail '''
@@ -13,3 +18,13 @@ class Node:
     def isHead(self) -> bool:
         ''' Returns true if current node is LinkedList head '''
         return self.previous == None
+
+    def getValue(self):
+        return self.value
+
+class LinkedList:
+
+    def __init__(self, initial_value=None):
+        ''' Current implentation always assumes LinkedList starts empty '''
+        if initial_value != None:
+            self.head = Node()
