@@ -1,5 +1,15 @@
 print("hello there")
-
+'''
+TODO
+[] LinkedList from list constructor
+[] LinkedList getNth node func
+[] LinkedList getNthFromEnd func
+[] LinkedList insert func
+[] LinkedList remove (given key) func
+[] LinkedList remove (given position)
+[] LinkedList length func
+[] Testing
+'''
 class Node:
     next = None
     previous = None
