@@ -11,15 +11,14 @@ TODO
 [] Testing
 '''
 class Node:
-    next = None
-    previous = None
-    value = None
 
     def __init__(self, val=None):
         self.next = None
         self.previous = None
         if val != None:
             self.value = val
+        else:
+            self.value = None
 
     def isTail(self) -> bool:
         ''' Returns true if current node is LinkedList tail '''
@@ -33,8 +32,6 @@ class Node:
         return self.value
 
 class LinkedList:
-    head = None
-    tail = None
 
     def __init__(self, initial_value=None):
         ''' Current implentation always assumes LinkedList starts empty '''
@@ -42,3 +39,8 @@ class LinkedList:
             self.head = Node(initial_value)
         else:
             self.head = Node()
+    
+    @classmethod
+    def fromList(cls, list):
+
+        return self
